@@ -369,9 +369,7 @@ export default function Home() {
               <div><span className="text-xl font-bold">Snapie AI</span><p className="text-slate-500 text-sm">AI Calorie Counter &amp; Nutrition Tracker</p></div>
             </div>
             <div className="flex items-center gap-6 text-slate-500">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
-              <a href="#" className="hover:text-white transition-colors">Contact</a>
+              <a href="mailto:pallabi@snapie.fit" className="hover:text-white transition-colors">Contact: pallabi@snapie.fit</a>
             </div>
             <p className="text-slate-600 text-sm">© {new Date().getFullYear()} Five Point AI Labs</p>
           </div>

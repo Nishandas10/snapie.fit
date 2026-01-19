@@ -33,12 +33,6 @@ const CheckIcon = () => (
   </svg>
 );
 
-const Sparkles = () => (
-  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-  </svg>
-);
-
 const CameraIcon = () => (
   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
@@ -107,12 +101,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-linear-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/25">
-                <Sparkles />
-              </div>
+              <Image src="/logo.svg" alt="Snapie AI Logo" width={40} height={40} className="w-10 h-10" />
               <div>
                 <span className="text-xl font-bold">Snapie AI</span>
-                <span className="hidden sm:inline text-slate-500 text-sm ml-2">Calorie Counter</span>
               </div>
             </div>
             <div className="hidden md:flex items-center gap-8">
@@ -374,7 +365,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-linear-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center"><Sparkles /></div>
+              <Image src="/logo.svg" alt="Snapie AI Logo" width={40} height={40} className="w-10 h-10" />
               <div><span className="text-xl font-bold">Snapie AI</span><p className="text-slate-500 text-sm">AI Calorie Counter &amp; Nutrition Tracker</p></div>
             </div>
             <div className="flex items-center gap-6 text-slate-500">

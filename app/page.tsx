@@ -99,15 +99,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white overflow-x-hidden">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute top-0 left-1/4 w-150 h-150 bg-emerald-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-0 right-1/4 w-125 h-125 bg-blue-500/10 rounded-full blur-[150px]"></div>
       </div>
 
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/25">
+              <div className="w-10 h-10 bg-linear-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/25">
                 <Sparkles />
               </div>
               <div>
@@ -172,7 +172,7 @@ export default function Home() {
 
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative flex gap-4 items-center">
-                <div className="absolute -inset-8 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-[60px] blur-3xl"></div>
+                <div className="absolute -inset-8 bg-linear-to-r from-emerald-500/20 to-blue-500/20 rounded-[60px] blur-3xl"></div>
                 <div className="relative phone-mockup scale-90">
                   <div className="phone-screen">
                     <Image src="/screenshots/2.png" alt="Snapie AI Food Scanner" width={260} height={520} className="w-full h-auto" priority />
@@ -195,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-12 bg-gradient-to-r from-emerald-900/50 to-blue-900/50 border-y border-white/5">
+      <section className="relative py-12 bg-linear-to-r from-emerald-900/50 to-blue-900/50 border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-xl sm:text-2xl text-white font-medium">🏆 The <span className="text-emerald-400 font-bold">1st Nutrient-Based Calorie Counter</span> that goes beyond calories and macros — tracks <span className="text-emerald-400">micronutrients &amp; vitamins</span> for health insights based eating</p>
         </div>
@@ -242,10 +242,10 @@ export default function Home() {
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">Snap. Scan. Track. In Under 7 Seconds.</h3>
               <p className="text-slate-400 text-lg mb-6">Our AI camera recognizes foods from Indian, Asian, Western, and global cuisines. Detect multiple items on one plate, estimate portions, and get instant calorie &amp; macro breakdown.</p>
               <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 flex-shrink-0"><CheckIcon /></div>Recognizes dal chawal, butter chicken, pasta &amp; more</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 flex-shrink-0"><CheckIcon /></div>Detects multiple food items in one photo</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 flex-shrink-0"><CheckIcon /></div>Intelligent portion size estimation</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 flex-shrink-0"><CheckIcon /></div>94% accuracy rate</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 shrink-0"><CheckIcon /></div>Recognizes dal chawal, butter chicken, pasta &amp; more</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 shrink-0"><CheckIcon /></div>Detects multiple food items in one photo</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 shrink-0"><CheckIcon /></div>Intelligent portion size estimation</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 shrink-0"><CheckIcon /></div>94% accuracy rate</li>
               </ul>
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
@@ -262,10 +262,10 @@ export default function Home() {
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">Go Deeper Than Calories</h3>
               <p className="text-slate-400 text-lg mb-6">Track 20+ nutrients including Iron, Sodium, Potassium, Sugar, Cholesterol, and essential vitamins. Get complete nutrition awareness, not just calorie counting.</p>
               <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0"><CheckIcon /></div>Track Iron, Sodium, Potassium &amp; Cholesterol</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0"><CheckIcon /></div>Monitor essential vitamins &amp; minerals</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0"><CheckIcon /></div>Identify hidden sugars in daily meals</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 flex-shrink-0"><CheckIcon /></div>Daily &amp; weekly nutrient summaries</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 shrink-0"><CheckIcon /></div>Track Iron, Sodium, Potassium &amp; Cholesterol</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 shrink-0"><CheckIcon /></div>Monitor essential vitamins &amp; minerals</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 shrink-0"><CheckIcon /></div>Identify hidden sugars in daily meals</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 shrink-0"><CheckIcon /></div>Daily &amp; weekly nutrient summaries</li>
               </ul>
             </div>
           </div>
@@ -276,10 +276,10 @@ export default function Home() {
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">Meet Sara — Your 24/7 Nutrition Coach</h3>
               <p className="text-slate-400 text-lg mb-6">Chat with your personal AI nutrition assistant who understands your goals and health conditions. Ask about calories, get meal suggestions, and stay aligned with your health journey.</p>
               <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 flex-shrink-0"><CheckIcon /></div>Understands your goals &amp; health conditions</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 flex-shrink-0"><CheckIcon /></div>Ask about calories &amp; nutrients anytime</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 flex-shrink-0"><CheckIcon /></div>Get healthier meal suggestions</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 flex-shrink-0"><CheckIcon /></div>Remembers your preferences &amp; adapts</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 shrink-0"><CheckIcon /></div>Understands your goals &amp; health conditions</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 shrink-0"><CheckIcon /></div>Ask about calories &amp; nutrients anytime</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 shrink-0"><CheckIcon /></div>Get healthier meal suggestions</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 shrink-0"><CheckIcon /></div>Remembers your preferences &amp; adapts</li>
               </ul>
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
@@ -296,17 +296,17 @@ export default function Home() {
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">See Your Nutrition Journey Clearly</h3>
               <p className="text-slate-400 text-lg mb-6">Track daily, weekly, and monthly progress with beautiful visual charts. Monitor calories vs goals, macros, micronutrients, and food quality scores.</p>
               <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 flex-shrink-0"><CheckIcon /></div>Calories consumed vs goals</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 flex-shrink-0"><CheckIcon /></div>Macros: protein, carbs, fats &amp; fiber</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 flex-shrink-0"><CheckIcon /></div>Micronutrient &amp; vitamin charts</li>
-                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 flex-shrink-0"><CheckIcon /></div>Progress graphs &amp; BMI tracking</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 shrink-0"><CheckIcon /></div>Calories consumed vs goals</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 shrink-0"><CheckIcon /></div>Macros: protein, carbs, fats &amp; fiber</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 shrink-0"><CheckIcon /></div>Micronutrient &amp; vitamin charts</li>
+                <li className="flex items-center gap-3 text-slate-300"><div className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 shrink-0"><CheckIcon /></div>Progress graphs &amp; BMI tracking</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="health" className="py-20 lg:py-28 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <section id="health" className="py-20 lg:py-28 bg-linear-to-b from-slate-950 via-slate-900 to-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-emerald-400 font-semibold text-sm uppercase tracking-wider">Health Modes</span>
@@ -346,15 +346,15 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold mt-3">Beautiful. Intuitive. Powerful.</h2>
           </div>
           <div className="flex justify-center gap-4 sm:gap-6 overflow-x-auto pb-8 snap-x px-4">
-            <div className="flex-shrink-0 snap-center"><div className="phone-mockup scale-90 sm:scale-100"><div className="phone-screen"><Image src="/screenshots/6.png" alt="Snapie AI screenshot 6" width={240} height={480} className="w-full h-auto" /></div></div></div>
-            <div className="flex-shrink-0 snap-center"><div className="phone-mockup scale-90 sm:scale-100"><div className="phone-screen"><Image src="/screenshots/7.png" alt="Snapie AI screenshot 7" width={240} height={480} className="w-full h-auto" /></div></div></div>
-            <div className="flex-shrink-0 snap-center"><div className="phone-mockup scale-90 sm:scale-100"><div className="phone-screen"><Image src="/screenshots/8.png" alt="Snapie AI screenshot 8" width={240} height={480} className="w-full h-auto" /></div></div></div>
+            <div className="shrink-0 snap-center"><div className="phone-mockup scale-90 sm:scale-100"><div className="phone-screen"><Image src="/screenshots/6.png" alt="Snapie AI screenshot 6" width={240} height={480} className="w-full h-auto" /></div></div></div>
+            <div className="shrink-0 snap-center"><div className="phone-mockup scale-90 sm:scale-100"><div className="phone-screen"><Image src="/screenshots/7.png" alt="Snapie AI screenshot 7" width={240} height={480} className="w-full h-auto" /></div></div></div>
+            <div className="shrink-0 snap-center"><div className="phone-mockup scale-90 sm:scale-100"><div className="phone-screen"><Image src="/screenshots/8.png" alt="Snapie AI screenshot 8" width={240} height={480} className="w-full h-auto" /></div></div></div>
           </div>
         </div>
       </section>
 
       <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/30 to-blue-900/30"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-emerald-900/30 to-blue-900/30"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-[150px]"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Start Your Nutrition Journey Today</h2>
@@ -374,7 +374,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center"><Sparkles /></div>
+              <div className="w-10 h-10 bg-linear-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center"><Sparkles /></div>
               <div><span className="text-xl font-bold">Snapie AI</span><p className="text-slate-500 text-sm">AI Calorie Counter &amp; Nutrition Tracker</p></div>
             </div>
             <div className="flex items-center gap-6 text-slate-500">

@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script"; // Import Script component
 import "./globals.css";
 
 const inter = Inter({
@@ -7,27 +8,30 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+// 1. Move Theme Color here (Next.js 14+ standard)
+export const viewport: Viewport = {
+  themeColor: "#10b981",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://snapie.fit"),
 
+  // 2. You DO NOT need verification here if DNS is done.
+  // verification: { google: "..." }, <--- Delete this
+
   title: {
-    default:
-      "Snapie AI – AI Calorie Counter & Nutrition Tracker App",
+    default: "Snapie AI – AI Calorie Counter & Nutrition Tracker App",
     template: "%s | Snapie AI",
   },
-
   description:
     "Snapie AI is an AI-powered calorie counter that tracks calories, macros, micronutrients, vitamins & minerals from food photos. Built for Indian & global cuisines.",
-
   applicationName: "Snapie AI",
   category: "Health & Fitness",
   creator: "Five Point AI Labs",
   publisher: "Five Point AI Labs",
-
   alternates: {
     canonical: "/",
   },
-
   robots: {
     index: true,
     follow: true,
@@ -39,7 +43,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-
   openGraph: {
     type: "website",
     url: "https://snapie.fit",
@@ -57,7 +60,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Snapie AI – AI Calorie Counter",
@@ -65,7 +67,6 @@ export const metadata: Metadata = {
       "Track calories, macros & micronutrients using AI food photo recognition.",
     images: ["/screenshots/2.png"],
   },
-
   icons: {
     icon: [
       { url: "/favicon_io/favicon.ico" },
@@ -78,6 +79,17 @@ export const metadata: Metadata = {
         sizes: "180x180",
       },
     ],
+  },
+  manifest: "/site.webmanifest",
+  
+  // 3. Move Android App Link here
+  other: {
+    "al:android:url": "android-app://com.Five_Point_AI_Labs.CalTrackAI/https/snapie.fit",
+    "al:android:package": "com.Five_Point_AI_Labs.CalTrackAI",
+    "al:android:app_name": "Snapie AI",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
   },
 };
 
@@ -118,37 +130,23 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        {/* Android App Indexing */}
-        <link
-          rel="alternate"
-          href="android-app://com.Five_Point_AI_Labs.CalTrackAI/https/snapie.fit"
-        />
-
-        {/* JSON-LD Structured Data */}
-        <script
+      {/* 4. REMOVE THE <HEAD> TAG ENTIRELY */}
+      <body className={`${inter.variable} antialiased`}>
+        {/* 5. Add Structured Data using Script strategy="beforeInteractive" or just inside body */}
+        <Script
+          id="software-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(softwareAppJsonLd),
           }}
         />
-        <script
+        <Script
+          id="org-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-
-        {/* PWA / Mobile */}
-        <meta name="theme-color" content="#10b981" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-      </head>
-      <body className={`${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

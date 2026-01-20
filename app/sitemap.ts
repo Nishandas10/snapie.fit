@@ -1,18 +1,26 @@
 // app/sitemap.ts
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+
+// Generates sitemap.xml at build time or on request (depending on your Next.js config)
+// Set NEXT_PUBLIC_SITE_URL in your environment (e.g., https://snapie.fit)
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://snapie.fit"
+).replace(/\/$/, "");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://snapie.fit";
+  // List only public, crawlable routes here. Auth-only pages are intentionally excluded.
+  const routes: Array<{
+    path: string;
+    changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+    priority?: number;
+  }> = [{ path: "/", priority: 1, changeFrequency: "daily" }];
 
-  // Use a strictly formatted URL for the root
-  return [
-    {
-      url: baseUrl, // Just the main domain
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    // REMOVE all the objects with #features, #compare, etc.
-    // Google ignores hashes (#) for indexing purposes anyway.
-  ];
+  const lastModified = new Date();
+
+  return routes.map((r) => ({
+    url: `${SITE_URL}${r.path}`,
+    lastModified,
+    changeFrequency: r.changeFrequency || "weekly",
+    priority: r.priority ?? 0.7,
+  }));
 }

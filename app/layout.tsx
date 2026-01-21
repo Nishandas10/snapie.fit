@@ -80,7 +80,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.webmanifest",
   
   // 3. Move Android App Link here
   other: {

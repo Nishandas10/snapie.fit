@@ -13,7 +13,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
     path: string;
     changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority?: number;
-  }> = [{ path: "/", priority: 1, changeFrequency: "daily" }];
+  }> = [
+    { path: "/", priority: 1, changeFrequency: "daily" },
+    { path: "/calculators", priority: 0.9, changeFrequency: "weekly" },
+    {
+      path: "/calculators/bmr-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/tdee-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/macro-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/bmi-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/calorie-deficit-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/body-fat-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/steps-to-calories-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/water-intake-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/protein-intake-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/calculators/intermittent-fasting-calculator",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+  ];
 
   const lastModified = new Date();
 

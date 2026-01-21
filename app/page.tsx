@@ -1,8 +1,23 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
 
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.Five_Point_AI_Labs.CalTrackAI";
+
+const calculatorLinks = [
+  { name: "BMR Calculator", href: "/calculators/bmr-calculator", icon: "🔥" },
+  { name: "TDEE Calculator", href: "/calculators/tdee-calculator", icon: "⚡" },
+  { name: "Macro Calculator", href: "/calculators/macro-calculator", icon: "🥗" },
+  { name: "BMI Calculator", href: "/calculators/bmi-calculator", icon: "⚖️" },
+  { name: "Calorie Deficit", href: "/calculators/calorie-deficit-calculator", icon: "📉" },
+  { name: "Body Fat Calculator", href: "/calculators/body-fat-calculator", icon: "📊" },
+  { name: "Steps to Calories", href: "/calculators/steps-to-calories-calculator", icon: "👟" },
+  { name: "Water Intake", href: "/calculators/water-intake-calculator", icon: "💧" },
+  { name: "Protein Intake", href: "/calculators/protein-intake-calculator", icon: "🥩" },
+  { name: "Intermittent Fasting", href: "/calculators/intermittent-fasting-calculator", icon: "⏱️" },
+];
 
 // Colorful Google Play triangle icon
 const GooglePlayIcon = () => (
@@ -90,6 +105,8 @@ const UserIcon = () => (
 );
 
 export default function Home() {
+  const [isCalculatorsOpen, setIsCalculatorsOpen] = useState(false);
+  
   return (
     <main className="min-h-screen bg-slate-950 text-white overflow-x-hidden">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -110,6 +127,49 @@ export default function Home() {
               <a href="#features" className="text-slate-400 hover:text-white transition-colors">Features</a>
               <a href="#compare" className="text-slate-400 hover:text-white transition-colors">Why Snapie</a>
               <a href="#health" className="text-slate-400 hover:text-white transition-colors">Health Modes</a>
+              
+              {/* Calculators Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsCalculatorsOpen(true)}
+                onMouseLeave={() => setIsCalculatorsOpen(false)}
+              >
+                <Link 
+                  href="/calculators" 
+                  className="text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  Calculators
+                  <svg className={`w-4 h-4 transition-transform ${isCalculatorsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </Link>
+                
+                {isCalculatorsOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64">
+                    <div className="bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-2 grid grid-cols-1 gap-1">
+                      {calculatorLinks.map((calc) => (
+                        <Link
+                          key={calc.href}
+                          href={calc.href}
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                        >
+                          <span className="text-lg">{calc.icon}</span>
+                          <span className="text-sm text-slate-300 group-hover:text-white transition-colors">{calc.name}</span>
+                        </Link>
+                      ))}
+                      <div className="border-t border-white/10 mt-1 pt-1">
+                        <Link
+                          href="/calculators"
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-emerald-500/20 transition-colors group"
+                        >
+                          <span className="text-lg">📱</span>
+                          <span className="text-sm text-emerald-400 font-medium">View All Calculators</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
             <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all hover:scale-105 border border-white/20">
               <GooglePlayIcon />

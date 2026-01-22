@@ -3,9 +3,7 @@ import type { MetadataRoute } from "next";
 
 // Generates sitemap.xml at build time or on request (depending on your Next.js config)
 // Set NEXT_PUBLIC_SITE_URL in your environment (e.g., https://snapie.fit)
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://snapie.fit"
-).replace(/\/$/, "");
+const SITE_URL = "https://snapie.fit".replace(/\/$/, "");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // List only public, crawlable routes here. Auth-only pages are intentionally excluded.

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.Five_Point_AI_Labs.CalTrackAI";
 
@@ -39,6 +40,8 @@ interface CalculatorLayoutProps {
 }
 
 export function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,6 +52,8 @@ export function Navbar() {
               <span className="text-xl font-bold text-white">Snapie AI</span>
             </div>
           </Link>
+          
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/#features" className="text-slate-400 hover:text-white transition-colors">Features</Link>
             <Link href="/#compare" className="text-slate-400 hover:text-white transition-colors">Why Snapie</Link>
@@ -77,13 +82,70 @@ export function Navbar() {
                 </div>
               </div>
             </div>
+            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all hover:scale-105 border border-white/20">
+              <GooglePlayIcon />
+              <span className="hidden sm:inline">Google Play</span>
+            </a>
           </div>
-          <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all hover:scale-105 border border-white/20">
-            <GooglePlayIcon />
-            <span className="hidden sm:inline">Google Play</span>
-          </a>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center gap-4">
+            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-slate-900 text-white px-3 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all border border-white/20 text-sm">
+              <GooglePlayIcon />
+              <span>Get App</span>
+            </a>
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white p-2"
+            >
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-b border-white/5 p-4 overflow-y-auto max-h-[80vh]">
+          <div className="flex flex-col gap-4">
+            <Link href="/#features" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Features</Link>
+            <Link href="/#compare" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Why Snapie</Link>
+            
+            <div className="py-2">
+              <div className="text-white font-medium mb-3">Calculators</div>
+              <div className="grid grid-cols-1 gap-2 pl-4">
+                {calculatorLinks.map((calc) => (
+                  <Link
+                    key={calc.href}
+                    href={calc.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center gap-3 py-2 text-slate-400 hover:text-white"
+                  >
+                    <span>{calc.icon}</span>
+                    <span className="text-sm">{calc.name}</span>
+                  </Link>
+                ))}
+                <Link
+                  href="/calculators"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-3 py-2 text-emerald-400 hover:text-emerald-300"
+                >
+                  <span>📱</span>
+                  <span className="text-sm font-medium">View All Calculators</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
@@ -202,3 +264,16 @@ export function RelatedCalculators({ currentCalculator }: { currentCalculator: s
     </section>
   );
 }
+
+const calculatorLinks = [
+  { name: "BMR Calculator", href: "/calculators/bmr-calculator", icon: "🔥" },
+  { name: "TDEE Calculator", href: "/calculators/tdee-calculator", icon: "⚡" },
+  { name: "Macro Calculator", href: "/calculators/macro-calculator", icon: "🥗" },
+  { name: "BMI Calculator", href: "/calculators/bmi-calculator", icon: "⚖️" },
+  { name: "Calorie Deficit", href: "/calculators/calorie-deficit-calculator", icon: "📉" },
+  { name: "Body Fat Calculator", href: "/calculators/body-fat-calculator", icon: "📊" },
+  { name: "Steps to Calories", href: "/calculators/steps-to-calories-calculator", icon: "👟" },
+  { name: "Water Intake", href: "/calculators/water-intake-calculator", icon: "💧" },
+  { name: "Protein Intake", href: "/calculators/protein-intake-calculator", icon: "🥩" },
+  { name: "Intermittent Fasting", href: "/calculators/intermittent-fasting-calculator", icon: "⏱️" },
+];

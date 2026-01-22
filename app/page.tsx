@@ -106,6 +106,7 @@ const UserIcon = () => (
 
 export default function Home() {
   const [isCalculatorsOpen, setIsCalculatorsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   return (
     <main className="min-h-screen bg-slate-950 text-white overflow-x-hidden">
@@ -123,6 +124,8 @@ export default function Home() {
                 <span className="text-xl font-bold">Snapie AI</span>
               </div>
             </div>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-slate-400 hover:text-white transition-colors">Features</a>
               <a href="#compare" className="text-slate-400 hover:text-white transition-colors">Why Snapie</a>
@@ -170,13 +173,71 @@ export default function Home() {
                   </div>
                 )}
               </div>
+              <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all hover:scale-105 border border-white/20">
+                <GooglePlayIcon />
+                <span className="hidden sm:inline">Google Play</span>
+              </a>
             </div>
-            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-slate-900 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all hover:scale-105 border border-white/20">
-              <GooglePlayIcon />
-              <span className="hidden sm:inline">Google Play</span>
-            </a>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center gap-4">
+              <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-slate-900 text-white px-3 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all border border-white/20 text-sm">
+                <GooglePlayIcon />
+                <span>Get App</span>
+              </a>
+              <button 
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-white p-2"
+              >
+                {isMobileMenuOpen ? (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/5 p-4 overflow-y-auto max-h-[80vh]">
+            <div className="flex flex-col gap-4">
+              <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Features</a>
+              <a href="#compare" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Why Snapie</a>
+              <a href="#health" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Health Modes</a>
+              
+              <div className="py-2">
+                <div className="text-white font-medium mb-3">Calculators</div>
+                <div className="grid grid-cols-1 gap-2 pl-4">
+                  {calculatorLinks.map((calc) => (
+                    <Link
+                      key={calc.href}
+                      href={calc.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center gap-3 py-2 text-slate-400 hover:text-white"
+                    >
+                      <span>{calc.icon}</span>
+                      <span className="text-sm">{calc.name}</span>
+                    </Link>
+                  ))}
+                  <Link
+                    href="/calculators"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center gap-3 py-2 text-emerald-400 hover:text-emerald-300"
+                  >
+                    <span>📱</span>
+                    <span className="text-sm font-medium">View All Calculators</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       <section className="relative min-h-screen flex items-center pt-24 pb-20 lg:pt-32">

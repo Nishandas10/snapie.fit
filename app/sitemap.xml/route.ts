@@ -1,115 +1,94 @@
+// app/sitemap.xml/route.ts
 import { NextResponse } from "next/server";
 
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://snapie.fit"
-).replace(/\/$/, "");
+const SITE_URL = "https://snapie.fit";
 
-const ROUTES: Array<{
-  path: string;
-  changeFrequency:
-    | "always"
-    | "hourly"
-    | "daily"
-    | "weekly"
-    | "monthly"
-    | "yearly"
-    | "never";
-  priority: number;
-}> = [
-  { path: "/", changeFrequency: "daily", priority: 1 },
-  { path: "/calculators", changeFrequency: "weekly", priority: 0.9 },
+// List only public, crawlable routes here
+const routes = [
+  { path: "/", priority: 1, changeFrequency: "daily" },
+  { path: "/calculators", priority: 0.9, changeFrequency: "weekly" },
   {
     path: "/calculators/bmr-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/tdee-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/macro-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/bmi-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/calorie-deficit-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/body-fat-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/steps-to-calories-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/water-intake-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/protein-intake-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
   {
     path: "/calculators/intermittent-fasting-calculator",
-    changeFrequency: "monthly",
     priority: 0.8,
+    changeFrequency: "monthly",
   },
 ];
 
-const escapeXml = (value: string) =>
-  value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
-
-const buildSitemap = () => {
+function generateSitemapXml(): string {
   const lastModified = new Date().toISOString();
-  const urls = ROUTES.map((route) => {
-    const loc = `${SITE_URL}${route.path}`;
-    return [
-      "  <url>",
-      `    <loc>${escapeXml(loc)}</loc>`,
-      `    <lastmod>${lastModified}</lastmod>`,
-      `    <changefreq>${route.changeFrequency}</changefreq>`,
-      `    <priority>${route.priority.toFixed(1)}</priority>`,
-      "  </url>",
-    ].join("\n");
-  }).join("\n");
 
-  return [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    urls,
-    "</urlset>",
-    "",
-  ].join("\n");
-};
+  const urlEntries = routes
+    .map(
+      (route) => `  <url>
+    <loc>${SITE_URL}${route.path}</loc>
+    <lastmod>${lastModified}</lastmod>
+    <changefreq>${route.changeFrequency}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`,
+    )
+    .join("\n");
 
-export const runtime = "nodejs";
-export const revalidate = 86400;
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries}
+</urlset>`;
+}
 
-export function GET() {
-  const xml = buildSitemap();
-  return new NextResponse(xml, {
+export async function GET() {
+  const sitemap = generateSitemapXml();
+
+  return new NextResponse(sitemap, {
+    status: 200,
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=86400, must-revalidate",
+      "Cache-Control":
+        "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+      "X-Robots-Tag": "noindex",
     },
   });
 }

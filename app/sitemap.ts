@@ -58,6 +58,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       changeFrequency: "weekly" as const,
     },
+    // Blog/Guide Pages
+    {
+      path: "/guide/The-Ultimate-Low-Glycemic-Food-List",
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    },
+    {
+      path: "/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners",
+      priority: 0.9,
+      changeFrequency: "monthly" as const,
+    },
   ];
 
   const lastModified = new Date();

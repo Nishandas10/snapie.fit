@@ -130,6 +130,8 @@ export default function Home() {
               <a href="#features" className="text-slate-400 hover:text-white transition-colors">Features</a>
               <a href="#compare" className="text-slate-400 hover:text-white transition-colors">Why Snapie</a>
               <a href="#health" className="text-slate-400 hover:text-white transition-colors">Health Modes</a>
+              <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" className="text-slate-400 hover:text-white transition-colors">Low GI List</Link>
+              <Link href="/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" className="text-slate-400 hover:text-white transition-colors">7-Day Meal Plan</Link>
               
               {/* Calculators Dropdown */}
               <div 
@@ -210,6 +212,8 @@ export default function Home() {
               <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Features</a>
               <a href="#compare" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Why Snapie</a>
               <a href="#health" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Health Modes</a>
+              <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Low GI List</Link>
+              <Link href="/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">7-Day Meal Plan</Link>
               
               <div className="py-2">
                 <div className="text-white font-medium mb-3">Calculators</div>

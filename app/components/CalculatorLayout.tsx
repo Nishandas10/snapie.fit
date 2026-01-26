@@ -57,6 +57,8 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link href="/#features" className="text-slate-400 hover:text-white transition-colors">Features</Link>
             <Link href="/#compare" className="text-slate-400 hover:text-white transition-colors">Why Snapie</Link>
+            <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" className="text-slate-400 hover:text-white transition-colors">Low GI List</Link>
+            <Link href="/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" className="text-slate-400 hover:text-white transition-colors">7-Day Meal Plan</Link>
             <div className="relative group">
               <button className="text-slate-400 hover:text-white transition-colors flex items-center gap-1">
                 Calculators
@@ -118,6 +120,8 @@ export function Navbar() {
           <div className="flex flex-col gap-4">
             <Link href="/#features" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Features</Link>
             <Link href="/#compare" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Why Snapie</Link>
+            <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Low GI List</Link>
+            <Link href="/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">7-Day Meal Plan</Link>
             
             <div className="py-2">
               <div className="text-white font-medium mb-3">Calculators</div>

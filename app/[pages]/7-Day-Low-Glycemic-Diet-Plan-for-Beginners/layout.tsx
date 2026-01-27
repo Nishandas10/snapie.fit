@@ -1,55 +1,78 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "7-Day Low Glycemic Diet Plan for Beginners (with Recipes & Macros)",
+  title: "7-Day Low Glycemic Diet Plan for Beginners (Free Recipes & Macros) | 2026",
   description:
-    "Complete 7-day low glycemic diet plan with 35 delicious recipes, exact calories, macros, and shopping lists. Control blood sugar, boost energy, and lose weight with this beginner-friendly low GI diet plan.",
+    "Complete 7-day low glycemic diet plan with 35 delicious recipes, exact calories, macros, and low GI foods list. Control blood sugar, boost energy, and lose weight with this beginner-friendly low gi meal plan. Includes Mediterranean, Keto, Indian, Asian & Latin options.",
   keywords: [
     "low glycemic diet plan",
     "low gi diet plan",
-    "7 day low glycemic meal plan",
-    "low glycemic recipes",
-    "low gi foods",
-    "blood sugar diet",
-    "low glycemic meal plan for weight loss",
-    "diabetic diet plan",
-    "low gi diet for beginners",
-    "glycemic index diet",
-    "low glycemic breakfast",
-    "low glycemic lunch",
-    "low glycemic dinner",
+    "low gi meal plan",
+    "low glycemic index meal plan",
+    "glycemic index food chart",
+    "low glycemic foods list",
+    "low gi foods chart",
+    "glycemic index chart for diabetics",
+    "gi index of foods",
+    "low glycemic snacks",
     "low gi snacks",
-    "blood sugar control diet",
+    "low glycemic fruits",
+    "low gi fruits",
+    "glycemic index of fruits chart",
+    "high glycemic foods",
+    "low glycemic load foods",
+    "low gi rice for diabetics",
+    "low glycemic index rice",
+    "whole grain basmati rice glycemic index",
+    "oatmeal glycemic index",
+    "low gi oats",
+    "oats glycemic index",
+    "apple glycemic index",
+    "banana glycemic index",
+    "kiwi glycemic index",
+    "popcorn glycemic index",
+    "glycemic index vegetables",
+    "low glycemic index bread",
+    "low glycemic index pasta",
+    "low gi grains",
+    "low glycemic flour",
+    "glycemic index and glycemic load chart",
+    "low glycaemic foods",
+    "foods low in glycemic index",
+    "low glycemic diet food list",
+    "glycemic chart",
+    "gi index chart",
+    "low gi list",
   ],
   authors: [{ name: "Snapie AI" }],
   creator: "Snapie AI",
   publisher: "Snapie AI",
   alternates: {
-    canonical: "/7-Day-Low-Glycemic-Diet-Plan-for-Beginners",
+    canonical: "https://snapie.fit/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners",
   },
   openGraph: {
     type: "article",
-    url: "https://snapie.fit/7-Day-Low-Glycemic-Diet-Plan-for-Beginners",
-    title: "7-Day Low Glycemic Diet Plan for Beginners (with Recipes & Macros)",
+    url: "https://snapie.fit/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners",
+    title: "7-Day Low Glycemic Diet Plan for Beginners (Free Recipes & Macros) | 2026",
     description:
-      "Complete 7-day low glycemic diet plan with 35 delicious recipes, exact calories, macros, and shopping lists. Control blood sugar, boost energy, and lose weight.",
+      "Complete 7-day low glycemic diet plan with 35+ recipes, calories, macros, and low GI foods chart. 6 cuisine styles: Balanced, Mediterranean, Keto, Indian, Asian & Latin.",
     siteName: "Snapie AI",
     images: [
       {
-        url: "/og-low-glycemic-diet-plan.png",
+        url: "https://snapie.fit/og-low-glycemic-diet-plan.png",
         width: 1200,
         height: 630,
-        alt: "7-Day Low Glycemic Diet Plan for Beginners",
+        alt: "7-Day Low Glycemic Diet Plan for Beginners - Free Low GI Meal Plan with Recipes",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "7-Day Low Glycemic Diet Plan for Beginners",
+    title: "7-Day Low Glycemic Diet Plan for Beginners | Free Recipes & Macros",
     description:
-      "Complete 7-day low GI diet plan with recipes, calories & macros. Free PDF download included.",
-    images: ["/og-low-glycemic-diet-plan.png"],
+      "Complete low gi diet plan with 35+ recipes, calories & macros. 6 cuisine styles: Mediterranean, Keto, Indian, Asian & Latin options.",
+    images: ["https://snapie.fit/og-low-glycemic-diet-plan.png"],
   },
   robots: {
     index: true,
@@ -68,9 +91,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "7-Day Low Glycemic Diet Plan for Beginners (with Recipes)",
+  headline: "7-Day Low Glycemic Diet Plan for Beginners (Free Recipes & Macros)",
   description:
-    "A complete 7-day low glycemic diet plan designed for beginners with 35 delicious recipes, exact calorie counts, macros, and shopping lists.",
+    "A complete 7-day low glycemic diet plan designed for beginners with 35+ delicious recipes, exact calorie counts, macros, and glycemic index food chart. Includes Mediterranean, Keto, Indian, Asian & Latin options.",
   image: "https://snapie.fit/og-low-glycemic-diet-plan.png",
   author: {
     "@type": "Organization",
@@ -86,11 +109,12 @@ const jsonLd = {
     },
   },
   datePublished: "2026-01-26",
-  dateModified: "2026-01-26",
+  dateModified: "2026-01-29",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://snapie.fit/7-Day-Low-Glycemic-Diet-Plan-for-Beginners",
+    "@id": "https://snapie.fit/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners",
   },
+  keywords: "low glycemic diet plan, low gi diet plan, glycemic index food chart, low gi meal plan, low glycemic foods list",
   about: [
     {
       "@type": "Thing",
@@ -103,6 +127,14 @@ const jsonLd = {
     {
       "@type": "Thing",
       name: "Meal Planning",
+    },
+    {
+      "@type": "Thing",
+      name: "Blood Sugar Control",
+    },
+    {
+      "@type": "Thing",
+      name: "Low GI Foods",
     },
   ],
 };
@@ -124,7 +156,7 @@ const faqJsonLd = {
       name: "Can I follow a low glycemic diet plan if I have diabetes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A low glycemic diet is often recommended for people with type 2 diabetes or prediabetes, as it helps manage blood sugar levels naturally. However, if you're taking diabetes medication (especially insulin), always consult with your healthcare provider before making dietary changes.",
+        text: "A low glycemic diet is often recommended for people with type 2 diabetes or prediabetes, as it helps manage blood sugar levels naturally. Many healthcare providers recommend using a glycemic index food chart to help diabetics make better food choices. However, if you're taking diabetes medication (especially insulin), always consult with your healthcare provider before making dietary changes.",
       },
     },
     {
@@ -132,7 +164,15 @@ const faqJsonLd = {
       name: "What foods are included in a low GI diet plan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Low GI foods include proteins (chicken, fish, eggs), non-starchy vegetables (spinach, broccoli, bell peppers), legumes (lentils, chickpeas, black beans), whole grains (steel-cut oats, quinoa, barley), low-sugar fruits (berries, apples, pears), and dairy (Greek yogurt, cheese).",
+        text: "Low GI foods include proteins (chicken, fish, eggs), non-starchy vegetables (spinach, broccoli, bell peppers), legumes (lentils, chickpeas, black beans), whole grains like low gi oats and quinoa, low glycemic fruits (berries with GI of 25, apples with GI of 36), and dairy (Greek yogurt, cheese). You can find a complete low glycemic foods list to guide your meal planning.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the glycemic index of common foods?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Here's a quick gi index chart: Low GI (under 55) includes oatmeal (GI 55), apple (GI 36), lentils (GI 32), and Greek yogurt (GI 11). Medium GI (56-69) includes banana (GI 51-62), whole wheat bread (GI 69). High glycemic foods (70+) include white rice (GI 73), white bread (GI 75), and watermelon (GI 76). Choose foods low in glycemic index for stable blood sugar.",
       },
     },
     {
@@ -141,6 +181,14 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Most people notice improved energy levels and reduced cravings within 3-5 days. Weight loss typically becomes noticeable after 2-3 weeks. Blood sugar improvements can be seen almost immediately. For lasting results, follow a low GI eating pattern for at least 8-12 weeks.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the best low glycemic snacks?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Great low gi snacks include nuts and seeds (almonds, walnuts), Greek yogurt with berries, hummus with vegetables, hard-boiled eggs, cheese with apple slices, edamame, dark chocolate (70%+), and popcorn (GI 55). These low glycemic index snacks keep blood sugar stable between meals.",
       },
     },
     {

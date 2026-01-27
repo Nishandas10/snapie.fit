@@ -96,11 +96,11 @@ export default function LowGlycemicGuide() {
           <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-100 mb-8">
             <p className="text-emerald-800 font-medium mb-2">📚 Related Resources:</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="https://snapie.fit/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" className="inline-flex items-center gap-1 text-emerald-700 hover:text-emerald-900 underline text-sm font-medium">
+              <Link href="/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" className="inline-flex items-center gap-1 text-emerald-700 hover:text-emerald-900 underline text-sm font-medium">
                 7-Day Low GI Diet Plan <ChevronRight size={14} />
               </Link>
-              <Link href="/calculators/bmi-calculator" className="inline-flex items-center gap-1 text-emerald-700 hover:text-emerald-900 underline text-sm font-medium">
-                BMI Calculator <ChevronRight size={14} />
+              <Link href="/guide/120-Low-Glycemic-Snacks-for-Stable-Blood-Sugar" className="inline-flex items-center gap-1 text-emerald-700 hover:text-emerald-900 underline text-sm font-medium">
+                120 Low GI Snacks <ChevronRight size={14} />
               </Link>
               <Link href="/calculators/calorie-deficit-calculator" className="inline-flex items-center gap-1 text-emerald-700 hover:text-emerald-900 underline text-sm font-medium">
                 Calorie Deficit Calculator <ChevronRight size={14} />

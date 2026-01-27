@@ -69,6 +69,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
       changeFrequency: "monthly" as const,
     },
+    {
+      path: "/guide/120-Low-Glycemic-Snacks-for-Stable-Blood-Sugar",
+      priority: 0.9,
+      changeFrequency: "monthly" as const,
+    },
   ];
 
   const lastModified = new Date();

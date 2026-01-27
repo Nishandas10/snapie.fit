@@ -3541,27 +3541,27 @@ export default function LowGlycemicDietPlanPage() {
               <h3 className="font-bold text-slate-900 group-hover:text-emerald-600 mb-2">500+ Low Glycemic Foods List</h3>
               <p className="text-slate-600 text-sm">Complete searchable database of <strong>low glycemic foods</strong> with GI scores, GL, and macros.</p>
             </Link>
+            <Link href="/guide/120-Low-Glycemic-Snacks-for-Stable-Blood-Sugar" className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-lg transition-all">
+              <div className="text-3xl mb-3">🍎</div>
+              <h3 className="font-bold text-slate-900 group-hover:text-emerald-600 mb-2">120 Low GI Snacks</h3>
+              <p className="text-slate-600 text-sm">Searchable list of <strong>low glycemic snacks</strong> with macros, tags, and cuisine filters.</p>
+            </Link>
             <Link href="/calculators/macro-calculator" className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-lg transition-all">
               <div className="text-3xl mb-3">🧮</div>
               <h3 className="font-bold text-slate-900 group-hover:text-emerald-600 mb-2">Macro Calculator</h3>
               <p className="text-slate-600 text-sm">Calculate your personal protein, carb, and fat targets for your <strong>low gi meal plan</strong>.</p>
             </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mt-6">
             <Link href="/calculators/calorie-deficit-calculator" className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-lg transition-all">
               <div className="text-3xl mb-3">🔥</div>
               <h3 className="font-bold text-slate-900 group-hover:text-emerald-600 mb-2">Calorie Deficit Calculator</h3>
               <p className="text-slate-600 text-sm">Find your optimal calorie deficit for sustainable weight loss with <strong>low glycaemic foods</strong>.</p>
             </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
             <Link href="/calculators/tdee-calculator" className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-lg transition-all">
               <div className="text-3xl mb-3">⚡</div>
               <h3 className="font-bold text-slate-900 group-hover:text-emerald-600 mb-2">TDEE Calculator</h3>
               <p className="text-slate-600 text-sm">Calculate your Total Daily Energy Expenditure for accurate meal planning.</p>
-            </Link>
-            <Link href="/calculators/bmi-calculator" className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-lg transition-all">
-              <div className="text-3xl mb-3">📊</div>
-              <h3 className="font-bold text-slate-900 group-hover:text-emerald-600 mb-2">BMI Calculator</h3>
-              <p className="text-slate-600 text-sm">Check your Body Mass Index and track your progress on the <strong>low glycemic diet</strong>.</p>
             </Link>
             <Link href="/calculators/intermittent-fasting-calculator" className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-lg transition-all">
               <div className="text-3xl mb-3">⏰</div>

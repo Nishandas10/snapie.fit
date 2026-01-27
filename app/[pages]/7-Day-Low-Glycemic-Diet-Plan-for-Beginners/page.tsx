@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Navbar } from '../../components/CalculatorLayout';
 import { 
   Calendar,
   CheckCircle2, 
@@ -2862,6 +2863,9 @@ export default function LowGlycemicDietPlanPage() {
 
   return (
     <div className="bg-slate-50 min-h-screen text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-900">
+      
+      {/* NAVBAR */}
+      <Navbar />
       
       {/* HERO SECTION */}
       <header className="relative bg-linear-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white pt-24 pb-32 overflow-hidden">

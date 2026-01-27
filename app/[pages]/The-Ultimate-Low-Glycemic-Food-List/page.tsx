@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Navbar } from '../../components/CalculatorLayout';
 import { 
   Search, 
   CheckCircle2, 
@@ -47,6 +48,9 @@ export default function LowGlycemicGuide() {
   return (
     <div className="bg-white min-h-screen text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-900">
       
+      {/* NAVBAR */}
+      <Navbar />
+      
       {/* HERO SECTION */}
       <header className="relative bg-slate-900 text-white pt-24 pb-32 overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
@@ -76,6 +80,7 @@ export default function LowGlycemicGuide() {
               Jump to Searchable List
             </a>
           </div>
+          <p className="text-sm text-emerald-200/70 mt-4">Discover 500+ low GI foods with AI-powered tracking • 4.8/5 from 300+ users</p>
         </div>
       </header>
 

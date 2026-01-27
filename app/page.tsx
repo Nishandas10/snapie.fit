@@ -129,8 +129,7 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-slate-400 hover:text-white transition-colors">Features</a>
               <Link href="/guide/120-Low-Glycemic-Snacks-for-Stable-Blood-Sugar" className="text-slate-400 hover:text-white transition-colors">120 Low GI Snacks</Link>
-              <a href="#health" className="text-slate-400 hover:text-white transition-colors">Health Modes</a>
-              <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" className="text-slate-400 hover:text-white transition-colors">Low GI List</Link>
+              <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" className="text-slate-400 hover:text-white transition-colors">Low GI Food List</Link>
               <Link href="/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" className="text-slate-400 hover:text-white transition-colors">7-Day Meal Plan</Link>
               
               {/* Calculators Dropdown */}
@@ -211,8 +210,7 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Features</a>
               <Link href="/guide/120-Low-Glycemic-Snacks-for-Stable-Blood-Sugar" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">120 Low GI Snacks</Link>
-              <a href="#health" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Health Modes</a>
-              <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Low GI List</Link>
+              <Link href="/guide/The-Ultimate-Low-Glycemic-Food-List" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">Low GI Food List</Link>
               <Link href="/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white py-2 border-b border-white/5">7-Day Meal Plan</Link>
               
               <div className="py-2">

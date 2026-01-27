@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Navbar } from '../../components/CalculatorLayout';
 import { 
   Search,
   CheckCircle2, 
@@ -290,6 +291,9 @@ export default function LowGlycemicSnacksPage() {
   return (
     <div className="bg-white min-h-screen text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-900">
       
+      {/* NAVBAR */}
+      <Navbar />
+      
       {/* HERO SECTION */}
       <header className="relative bg-slate-900 text-white pt-24 pb-32 overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
@@ -319,6 +323,7 @@ export default function LowGlycemicSnacksPage() {
               Jump to Snack List ↓
             </a>
           </div>
+          <p className="text-sm text-emerald-200/70 mt-4">Track your low GI snacks effortlessly with AI • 4.8/5 from 300+ users</p>
         </div>
       </header>
 

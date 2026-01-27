@@ -186,7 +186,7 @@ export default function LowGlycemicGuide() {
         </section>
 
         {/* SNAPIE AI CTA - PRIMARY */}
-        <div className="bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 rounded-2xl p-8 md:p-10 text-white mb-16 relative overflow-hidden">
+        <div className="bg-linear-to-br from-violet-600 via-purple-600 to-indigo-700 rounded-2xl p-8 md:p-10 text-white mb-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-400/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
           <div className="relative z-10">
@@ -275,7 +275,7 @@ export default function LowGlycemicGuide() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-slate-50 to-emerald-50 p-8 rounded-2xl border border-slate-200">
+          <div className="bg-linear-to-r from-slate-50 to-emerald-50 p-8 rounded-2xl border border-slate-200">
             <h3 className="text-xl font-bold text-slate-900 mb-4">How Blood Sugar Spikes Affect Your Body</h3>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
@@ -360,7 +360,7 @@ export default function LowGlycemicGuide() {
           </div>
 
           {/* Global Cuisines */}
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-8 rounded-2xl border border-cyan-100">
+          <div className="bg-linear-to-br from-cyan-50 to-blue-50 p-8 rounded-2xl border border-cyan-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-cyan-100 rounded-lg text-cyan-600"><Globe /></div>
               <h3 className="text-2xl font-bold text-slate-900">Global Low GI Cuisines</h3>
@@ -480,7 +480,7 @@ export default function LowGlycemicGuide() {
             </div>
 
             {/* Table */}
-            <div className="overflow-x-auto max-h-[600px] overflow-y-auto">
+            <div className="overflow-x-auto max-h-150 overflow-y-auto">
               <table className="w-full text-left border-collapse">
                 <thead className="bg-slate-800/50 text-xs uppercase tracking-wider text-slate-400 sticky top-0">
                   <tr>
@@ -639,10 +639,10 @@ export default function LowGlycemicGuide() {
         {/* SECTION: MEAL PLANNING TIPS */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Low Glycemic Index Meal Plan Ideas</h2>
-          <p className="text-slate-600 mb-8">Creating a <strong className="text-slate-800">low gi meal plan</strong> doesn&apos;t have to be complicated. Here are meal ideas using foods from our <strong className="text-slate-800">low glycemic foods list</strong>. For a complete week of meals, check out our <Link href="/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" className="text-emerald-600 hover:text-emerald-700 font-semibold underline underline-offset-2">7-Day Low Glycemic Diet Plan for Beginners</Link>.</p>
+          <p className="text-slate-600 mb-8">Creating a <strong className="text-slate-800">low gi meal plan</strong> doesn&apos;t have to be complicated. Here are meal ideas using foods from our <strong className="text-slate-800">low glycemic foods list</strong>. For a complete week of meals, check out our <Link href="https://snapie.fit/guide/7-Day-Low-Glycemic-Diet-Plan-for-Beginners" className="text-emerald-600 hover:text-emerald-700 font-semibold underline underline-offset-2">7-Day Low Glycemic Diet Plan for Beginners</Link>.</p>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-xl border border-orange-100">
+            <div className="bg-linear-to-br from-orange-50 to-yellow-50 p-6 rounded-xl border border-orange-100">
               <div className="flex items-center gap-2 mb-4">
                 <Utensils className="text-orange-500" size={20} />
                 <h4 className="font-bold text-slate-900">Breakfast Ideas</h4>
@@ -655,7 +655,7 @@ export default function LowGlycemicGuide() {
                 <li>• Dosa with sambar (Indian)</li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
+            <div className="bg-linear-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
               <div className="flex items-center gap-2 mb-4">
                 <Utensils className="text-green-500" size={20} />
                 <h4 className="font-bold text-slate-900">Lunch Ideas</h4>
@@ -668,7 +668,7 @@ export default function LowGlycemicGuide() {
                 <li>• Soba noodle stir fry</li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-100">
+            <div className="bg-linear-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-100">
               <div className="flex items-center gap-2 mb-4">
                 <Utensils className="text-purple-500" size={20} />
                 <h4 className="font-bold text-slate-900">Dinner Ideas</h4>
@@ -685,16 +685,16 @@ export default function LowGlycemicGuide() {
         </section>
 
         {/* SNAPIE AI CTA - SECONDARY */}
-        <div className="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-8 text-white mb-16">
+        <div className="bg-linear-to-r from-emerald-500 to-teal-600 rounded-2xl p-8 text-white mb-16">
           <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
             <div className="flex-1">
               <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-                <Star className="text-yellow-300" size={20} />
-                <Star className="text-yellow-300" size={20} />
-                <Star className="text-yellow-300" size={20} />
-                <Star className="text-yellow-300" size={20} />
-                <Star className="text-yellow-300" size={20} />
-                <span className="text-emerald-100 text-sm ml-2">4.9/5 from 10,000+ users</span>
+                <Star className="fill-yellow-300 text-yellow-300" size={20} />
+                <Star className="fill-yellow-300 text-yellow-300" size={20} />
+                <Star className="fill-yellow-300 text-yellow-300" size={20} />
+                <Star className="fill-yellow-300 text-yellow-300" size={20} />
+                <Star className="fill-yellow-300 text-yellow-300" size={20} />
+                <span className="text-emerald-100 text-sm ml-2">4.8/5 from 300+ users</span>
               </div>
               <h3 className="text-2xl font-bold mb-2">Make Low GI Eating Effortless</h3>
               <p className="text-emerald-100">
@@ -839,21 +839,13 @@ export default function LowGlycemicGuide() {
       {/* FOOTER */}
       <footer className="bg-slate-50 border-t border-slate-200 py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h3 className="font-bold text-slate-900 mb-4">Get the full chart in your inbox</h3>
-          <p className="text-slate-500 mb-6 max-w-md mx-auto">
-            Join 20,000+ readers who use our printable guide for their weekly grocery shopping.
-          </p>
-          <div className="flex justify-center gap-3 max-w-sm mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-emerald-500"
-            />
-            <button className="bg-slate-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-slate-800 transition-colors">
-              Send
-            </button>
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center gap-2">
+              <span className="bg-emerald-500 text-white p-1 rounded-sm font-bold text-xs">AI</span>
+              <span className="text-slate-800 font-bold text-lg tracking-tight">Snapie.fit</span>
+            </div>
           </div>
-          <p className="mt-12 text-xs text-slate-400">
+          <p className="mt-4 text-xs text-slate-400">
             © 2026 Snapie.fit. Medical Disclaimer: This content is for informational purposes only and not medical advice.
           </p>
         </div>

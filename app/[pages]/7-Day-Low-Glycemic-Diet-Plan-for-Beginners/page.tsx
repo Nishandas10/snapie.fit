@@ -3069,7 +3069,7 @@ export default function LowGlycemicDietPlanPage() {
           <div className="bg-linear-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl p-5 mb-8 border border-emerald-200">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center shrink-0">
                   <Image
                     src="/logo.png"
                     alt="Snapie AI"
